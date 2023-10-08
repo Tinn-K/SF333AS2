@@ -153,8 +153,10 @@ fun GameScreen(
                 elevation = ButtonDefaults.buttonElevation(5.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = BlueCustom,
-                    contentColor = Color.White
-                )
+                    contentColor = Color.White,
+                    disabledContainerColor = Color.Gray
+                ),
+                enabled = state.hasWon || viewModel.hasBoardFull()
             ) {
                 Text(text = "Play Again", fontSize = 16.sp)
             }
